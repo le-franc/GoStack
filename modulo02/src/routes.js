@@ -6,6 +6,7 @@ import SessionControler from './app/controllers/sessionController';
 import FileController from './app/controllers/fileController';
 import ProviderController from './app/controllers/providerController';
 import AppointmentControler from './app/controllers/appointmentController';
+import AvailableControler from './app/controllers/availableController';
 import ScheduleController from './app/controllers/scheduleController';
 import NotificationController from './app/controllers/notificationController';
 
@@ -24,6 +25,7 @@ routes.put('/users', UserControler.update);
 routes.post('/files', upload.single('file'), FileController.store);
 
 routes.get('/providers', ProviderController.index);
+routes.get('/providers/:providerId/available', AvailableControler.index);
 
 routes.get('/appointments', AppointmentControler.index);
 routes.post('/appointments', AppointmentControler.store);
