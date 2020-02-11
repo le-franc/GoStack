@@ -1,0 +1,54 @@
+# React
+
+yarn init -y
+yarn add @babel/core -D @babel/preset-env -D @babel/preset-react -D webpack -D webpack-cli -D
+yarn add react react-dom
+
+
+# Criar arquivo babel.config.js
+
+module.exports = {
+  presets: [
+    "@babel/preset-env",
+    "@babel/preset-react"
+  ],
+};
+
+yarn add babel-loader -D
+
+# Criar scripts no package.json
+
+"scripts": {
+    "build": "webpack --mode development"
+  },
+
+yarn build  
+
+
+# Atualizar automaticamente o código e criar bundle para Produção
+
+yarn add webpack-dev-server -D
+
+"scripts": {
+    "build": "webpack --mode production",
+    "dev": "webpack-dev-server --mode development"
+  },
+
+  # Adicionando CSS
+
+  yarn add style-loader css-loader -D
+
+  // Adicionar no webpack.config.js
+
+
+  # Importando imagens
+
+  yarn add file-loader -D
+
+  # Habilitar a feature de colocar propriedades no state() do component
+
+  yarn add @babel/plugin-proposal-class-properties
+
+  # Adicionar funcionalidade de verificação de tipo de propriedades
+
+  yarn add prop-types
