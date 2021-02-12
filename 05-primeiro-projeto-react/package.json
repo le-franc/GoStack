@@ -45,6 +45,7 @@
   },
   "devDependencies": {
     "@types/react-router-dom": "^5.1.7",
+    "@types/styled-components": "^5.1.7",
     "@typescript-eslint/eslint-plugin": "^4.15.0",
     "@typescript-eslint/parser": "^4.15.0",
     "eslint": "^7.19.0",
@@ -52,15 +53,15 @@
     "eslint-plugin-prettier": "^3.3.1",
     "prettier": "^2.2.1",
     "react-router-dom": "^5.2.0"
-  },  
-    "husky": {
-        "hooks": {
-            "pre-commit": "lint-staged"
-        }
-    },
-    "lint-staged": {
-        "*.{js,ts,tsx}": [
-            "eslint --fix"
-        ]
-    }  
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx}": [
+      "eslint --fix"
+    ]
+  }
 }
